@@ -1,9 +1,9 @@
-class EventCollectionPresenter
+class EventCollectionSerializer
   include ActiveModel::Serializers::JSON
 
   attr_reader :events, :event_presenter_factory
 
-  def initialize(events, event_presenter_factory = EventPresenter)
+  def initialize(events, event_presenter_factory = EventSerializer)
     @events = events
     @event_presenter_factory = event_presenter_factory
   end

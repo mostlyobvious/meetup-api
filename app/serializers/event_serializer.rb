@@ -1,4 +1,4 @@
-class EventPresenter
+class EventSerializer
   include ActiveModel::Serializers::JSON
 
   attr_reader :event
