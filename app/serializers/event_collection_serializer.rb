@@ -1,7 +1,7 @@
 class EventCollectionSerializer
   attr_reader :event_serializer
 
-  def initialize(events, event_serializer = EventSerializer.new)
+  def initialize(event_serializer = EventSerializer.new)
     @event_serializer = event_serializer
   end
 
