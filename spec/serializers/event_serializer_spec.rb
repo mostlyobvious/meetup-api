@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe EventSerializer do
-  let(:event_serializer) { described_class.new }
+  let(:event_serializer) { isolate(described_class) }
   let(:serialized_event) { JSON.parse(event_serializer.serialize(event)) }
   let(:event)            { fake(:event, name: 'bazinga') }
 

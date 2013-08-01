@@ -9,8 +9,8 @@ describe EventsController do
   let(:event_id)                    { '42' }
 
   before do
-    stub(controller).event_repository { event_repository }
-    stub(controller).event_serializer { event_serializer }
+    stub(controller).event_repository            { event_repository }
+    stub(controller).event_serializer            { event_serializer }
     stub(controller).event_collection_serializer { event_collection_serializer }
   end
 

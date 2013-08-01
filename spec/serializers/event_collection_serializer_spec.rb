@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe EventCollectionSerializer do
-  let(:event_collection_serializer) { described_class.new(event_serializer) }
+  let(:event_collection_serializer) { isolate(described_class) }
   let(:event_serializer)            { fake(:event_serializer, serialize: '{}') }
   let(:event)                       { fake(:event, name: 'bazinga') }
   let(:event_collection)            { [event, event] }
