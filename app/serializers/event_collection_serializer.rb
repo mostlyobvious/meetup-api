@@ -6,7 +6,6 @@ class EventCollectionSerializer
   end
 
   def serialize(events)
-    events = events.collect { |event| JSON.parse(event_serializer.serialize(event)) }
-    JSON.dump(events)
+    "[#{events.map { |event| event_serializer.serialize(event) }.join(',')}]"
   end
 end
