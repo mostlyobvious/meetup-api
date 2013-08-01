@@ -10,4 +10,9 @@ describe EventCollectionSerializer do
 
   specify { expect(event_collection_serializer).to respond_to(:serialize) }
   specify { expect(parsed_event_collection).to have(2).items }
+
+  it 'should serialize individual items' do
+    event_collection_serializer.serialize(event_collection)
+    expect(event_serializer).to have_received.serialize(event)
+  end
 end
