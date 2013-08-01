@@ -1,11 +1,9 @@
 class Event < ActiveRecord::Base
-  class << self
-    def for_public_listing
-      all
-    end
+  def self.events_for_public_listing
+    all
+  end
 
-    def find_by_id(id)
-      find(id)
-    end
+  def self.find_event_by_id(id)
+    find(id)
   end
 end
