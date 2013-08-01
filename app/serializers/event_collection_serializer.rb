@@ -1,6 +1,4 @@
 class EventCollectionSerializer
-  include ActiveModel::Serializers::JSON
-
   attr_reader :event_serializer
 
   def initialize(events, event_serializer = EventSerializer.new)
