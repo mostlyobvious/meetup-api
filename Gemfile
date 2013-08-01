@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.0'
 gem 'rails-api'
-gem 'dependor'
+gem 'dependor', require: %w(dependor dependor/shorty)
 
 group :development do
   gem 'sqlite3'
